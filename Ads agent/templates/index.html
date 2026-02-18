@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agentic Ads Platform — AI-Powered Creative Studio</title>
+    <meta name="description"
+        content="Generate high-converting ad creatives at scale with AI agents. From brief to beautiful ads in seconds." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+</head>
+
+<body>
+
+    <!-- ═══════════════════════════════ HEADER ═══════════════════════════════ -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <span class="logo-text">AdGenius <span class="logo-badge">AI</span></span>
+            </div>
+            <nav class="nav">
+                <a href="#brief" class="nav-link">Brief</a>
+                <a href="#results" class="nav-link">Results</a>
+                <a href="#platforms" class="nav-link">Platforms</a>
+                <a href="#chat" class="nav-link">Refine</a>
+                <a href="/login" class="nav-link nav-link--signin">Sign In</a>
+            </nav>
+            <div class="header-status" id="headerStatus">
+                <span class="status-dot"></span>
+                <span>4 Agents Ready</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">🚀 AI-Powered Creative Studio</div>
+            <h1 class="hero-title">
+                Generate <span class="gradient-text">Winning Ads</span><br />
+                at Scale, Instantly
+            </h1>
+            <p class="hero-subtitle">
+                4 specialized AI agents collaborate to create compelling copy, stunning visuals,
+                and platform-ready variations from a single brief.
+            </p>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num">10x</span><span class="stat-label">Faster</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">4</span><span class="stat-label">AI Agents</span></div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num">5</span><span class="stat-label">Platforms</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ BRIEF FORM ═══════════════════════════════ -->
+    <section class="section" id="brief">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Step 1</div>
+                <h2 class="section-title">Describe Your Product</h2>
+                <p class="section-subtitle">Give the agents a brief and watch them create magic.</p>
+            </div>
+
+            <div class="brief-card glass-card">
+                <form id="briefForm" class="brief-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label class="form-label" for="productName">
+                                <span class="label-icon">🏷️</span> Product Name
+                            </label>
+                            <input type="text" id="productName" class="form-input" placeholder="e.g. EcoBottle Pro"
+                                required />
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="audience">
+                                <span class="label-icon">🎯</span> Target Audience
+                            </label>
+                            <input type="text" id="audience" class="form-input"
+                                placeholder="e.g. eco-conscious millennials" required />
+                        </div>
+
+                        <div class="form-group form-group--full">
+                            <label class="form-label" for="description">
+                                <span class="label-icon">📝</span> Product Description
+                            </label>
+                            <textarea id="description" class="form-input form-textarea" rows="3"
+                                placeholder="Describe your product, its key benefits, and what makes it unique..."
+                                required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span class="label-icon">🎨</span> Tone of Voice
+                            </label>
+                            <div class="tone-grid" id="toneGrid">
+                                <button type="button" class="tone-btn active" data-tone="professional">💼
+                                    Professional</button>
+                                <button type="button" class="tone-btn" data-tone="playful">🎉 Playful</button>
+                                <button type="button" class="tone-btn" data-tone="urgent">⚡ Urgent</button>
+                                <button type="button" class="tone-btn" data-tone="emotional">💙 Emotional</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <span class="label-icon">📱</span> Target Platforms
+                            </label>
+                            <div class="platform-checks" id="platformChecks">
+                                <label class="check-item">
+                                    <input type="checkbox" value="instagram" checked /> <span>📸 Instagram</span>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" value="facebook" checked /> <span>👥 Facebook</span>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" value="twitter" checked /> <span>🐦 Twitter/X</span>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" value="linkedin" /> <span>💼 LinkedIn</span>
+                                </label>
+                                <label class="check-item">
+                                    <input type="checkbox" value="google" /> <span>🔍 Google</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-footer">
+                        <button type="submit" class="btn-generate" id="generateBtn">
+                            <span class="btn-icon">⚡</span>
+                            <span class="btn-text">Generate Creatives</span>
+                            <span class="btn-loader" id="btnLoader" style="display:none">
+                                <span class="spinner"></span> Generating...
+                            </span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ AGENT PIPELINE ═══════════════════════════════ -->
+    <section class="section" id="pipeline" style="display:none">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Processing</div>
+                <h2 class="section-title">Agents at Work</h2>
+            </div>
+            <div class="pipeline">
+                <div class="pipeline-agent" id="agent-creative" data-step="1">
+                    <div class="agent-icon">✍️</div>
+                    <div class="agent-info">
+                        <div class="agent-name">Creative Agent</div>
+                        <div class="agent-task">Generating ad copy...</div>
+                    </div>
+                    <div class="agent-status-icon">⏳</div>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-agent" id="agent-design" data-step="2">
+                    <div class="agent-icon">🎨</div>
+                    <div class="agent-info">
+                        <div class="agent-name">Design Agent</div>
+                        <div class="agent-task">Creating visuals...</div>
+                    </div>
+                    <div class="agent-status-icon">⏳</div>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-agent" id="agent-variation" data-step="3">
+                    <div class="agent-icon">🔀</div>
+                    <div class="agent-info">
+                        <div class="agent-name">Variation Agent</div>
+                        <div class="agent-task">Producing A/B variants...</div>
+                    </div>
+                    <div class="agent-status-icon">⏳</div>
+                </div>
+                <div class="pipeline-arrow">→</div>
+                <div class="pipeline-agent" id="agent-platform" data-step="4">
+                    <div class="agent-icon">📱</div>
+                    <div class="agent-info">
+                        <div class="agent-name">Platform Agent</div>
+                        <div class="agent-task">Adapting for platforms...</div>
+                    </div>
+                    <div class="agent-status-icon">⏳</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ RESULTS ═══════════════════════════════ -->
+    <section class="section" id="results" style="display:none">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Step 2</div>
+                <h2 class="section-title">Your Ad Creatives</h2>
+                <p class="section-subtitle">Review, select, and refine your generated creatives.</p>
+            </div>
+
+            <!-- Copy Results -->
+            <div class="results-grid">
+                <div class="result-panel glass-card">
+                    <div class="panel-header">
+                        <span class="panel-icon">✍️</span>
+                        <h3 class="panel-title">Ad Copy</h3>
+                        <span class="agent-tag">Creative Agent</span>
+                    </div>
+                    <div id="copyResult" class="copy-result">
+                        <div class="copy-field">
+                            <div class="copy-label">Headline</div>
+                            <div class="copy-value" id="copyHeadline"></div>
+                        </div>
+                        <div class="copy-field">
+                            <div class="copy-label">Body Copy</div>
+                            <div class="copy-value" id="copyBody"></div>
+                        </div>
+                        <div class="copy-field">
+                            <div class="copy-label">Call to Action</div>
+                            <div class="copy-value cta-value" id="copyCta"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Results -->
+                <div class="result-panel glass-card">
+                    <div class="panel-header">
+                        <span class="panel-icon">🎨</span>
+                        <h3 class="panel-title">Visual Assets</h3>
+                        <span class="agent-tag">Design Agent</span>
+                    </div>
+                    <div id="imageGrid" class="image-grid"></div>
+                </div>
+            </div>
+
+            <!-- Variations -->
+            <div class="glass-card variations-section">
+                <div class="panel-header">
+                    <span class="panel-icon">🔀</span>
+                    <h3 class="panel-title">A/B Variations</h3>
+                    <span class="agent-tag">Variation Agent</span>
+                </div>
+                <div class="variation-tabs" id="variationTabs"></div>
+                <div class="variation-content" id="variationContent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ PLATFORMS ═══════════════════════════════ -->
+    <section class="section" id="platforms" style="display:none">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Step 3</div>
+                <h2 class="section-title">Platform Previews</h2>
+                <p class="section-subtitle">See how your ad looks on each platform.</p>
+            </div>
+
+            <div class="platform-tabs-bar" id="platformTabsBar"></div>
+            <div class="platform-preview-area" id="platformPreviewArea"></div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ CHAT REFINEMENT ═══════════════════════════════ -->
+    <section class="section" id="chat" style="display:none">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-tag">Step 4</div>
+                <h2 class="section-title">Refine with AI</h2>
+                <p class="section-subtitle">Chat with the agents to perfect your creatives.</p>
+            </div>
+
+            <div class="chat-container glass-card">
+                <div class="chat-messages" id="chatMessages">
+                    <div class="chat-msg agent-msg">
+                        <div class="msg-avatar">⚡</div>
+                        <div class="msg-bubble">
+                            Hi! I'm your AI creative assistant. Your ads are ready! 🎉<br /><br />
+                            You can ask me to:
+                            <ul>
+                                <li>Change the tone ("Make it more playful")</li>
+                                <li>Adjust the copy ("Make the headline shorter")</li>
+                                <li>Try a different angle ("Focus on sustainability")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-input-bar">
+                    <input type="text" id="chatInput" class="chat-input"
+                        placeholder="e.g. Make the tone more urgent..." />
+                    <button class="chat-send-btn" id="chatSendBtn" onclick="sendRefinement()">
+                        <span>Send</span> ➤
+                    </button>
+                </div>
+                <div class="chat-suggestions">
+                    <span class="suggestion-label">Try:</span>
+                    <button class="suggestion-chip" onclick="setChat('Make it more playful and fun')">More
+                        playful</button>
+                    <button class="suggestion-chip" onclick="setChat('Add urgency and scarcity')">Add urgency</button>
+                    <button class="suggestion-chip" onclick="setChat('Make it more emotional and heartfelt')">More
+                        emotional</button>
+                    <button class="suggestion-chip"
+                        onclick="setChat('Use a professional business tone')">Professional</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="logo">
+                <div class="logo-icon">⚡</div>
+                <span class="logo-text">AdGenius <span class="logo-badge">AI</span></span>
+            </div>
+            <p class="footer-text">Powered by 4 specialized AI agents • Built for scale</p>
+        </div>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
